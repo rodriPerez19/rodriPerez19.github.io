@@ -1,0 +1,227 @@
+*{
+    margin:0 ;
+    padding: 0;
+    font-family: 'Titillium Web', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+/* .color1 {color: #140f0c;}
+.color2 {color: #0e3559;}
+.color3 {color: #0877b8;}
+.color4 {color: #08c5ff;}
+.color5 {color: #0ffff8;} */
+:root{
+
+    --color-letra:#0877b8;
+    --color-letra-hover:#0e3559;
+    --color-fondo: #140f0c;
+    --color-hover-celeste: #0ffff8;
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   background: var(--color-fondo);
+}
+
+nav{
+    display: flex;
+    height: 10vh;
+    /* background-color: var(--color-fondo); */
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 2px  solid var(--color-hover-celeste);
+    box-shadow: 0 0 20px var(--color-hover-celeste);
+}
+
+nav a{
+    font-size: 24px;
+    color: var(--color-letra);
+    text-decoration: none;
+    
+}
+nav a:hover{
+    
+    
+    text-shadow: 0 0 10px var(--color-hover-celeste)
+    ,0 0 40px var(--color-hover-celeste)
+    ,0 0 80px var(--color-hover-celeste);
+}
+
+header{
+    height: 90vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil-container{
+    position: relative;
+    padding: 15px 30px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: solid 1px var(--color-hover-celeste); */
+    color: var(--color-letra);
+    font-size: 30px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    text-shadow: 0 0 10px var(--color-letra),0 0 40px var(--color-letra);
+    
+}
+.perfil-container span{
+    position: absolute;
+    display: block;
+}
+.perfil-container span:nth-child(1){
+    top: 0;
+    left: -110%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,var(--color-letra));
+}
+
+.perfil-container:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+.perfil-container span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,var(--color-letra));
+}
+
+.perfil-container:hover span:nth-child(2){
+
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.perfil-container span:nth-child(3){
+    bottom: 0;
+    right: -110%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,var(--color-letra));
+}
+
+.perfil-container:hover span:nth-child(3){
+
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.perfil-container span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,var(--color-letra));
+}
+
+.perfil-container:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+/* .perfil-container:hover{
+
+    color: var(--color-letra-hover) ;
+    background: var(--color-letra);
+    box-shadow: 0 0 10px var(--color-letra),0 0 40px var(--color-letra),0 0 80px var(--color-letra);
+    transition: 0.5s;
+
+} */
+
+ /**! de aca par abajo es para la view habilidades.php */
+
+.skills-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.skills{
+    
+    width: 80%;
+    height: 80%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr;
+    grid-template-areas: "html css php"
+                         "javaScrip laravel java";
+    user-select: none;    
+    z-index: 1;
+}
+
+
+.skill-1{
+    
+    grid-area: html;
+    justify-self: center;
+    align-self: center;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    box-shadow: 5px 5px 10px 10px rgba(0,0,0,0.8);
+}
+
+.skill-2{
+    
+    grid-area: css;
+    justify-self: center;
+    align-self: center;
+    filter: brightness(1.1); 
+     mix-blend-mode: multiply;
+    box-shadow: 5px 5px 10px 10px rgba(0,0,0,0.8);
+}
+
+.skill-3{
+    
+    grid-area:php; 
+    justify-self: center;
+    align-self: center;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    box-shadow: 5px 5px 10px 10px rgba(0,0,0,0.8);
+}
+.skill-4{
+    grid-area:javaScrip;
+    justify-self: center;
+    align-self: center;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    box-shadow: 5px 5px 10px 10px rgba(0,0,0,0.8);
+}
+.skill-5{
+    grid-area:laravel ;
+    justify-self: center;
+    align-self: center;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    box-shadow: 5px 5px 10px 10px rgba(0,0,0,0.8);
+}
+.skill-6{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    grid-area:java ;
+    justify-self: center;
+    align-self: center;
+    box-shadow: 5px 5px 10px 10px rgba(0,0,0,0.8);
+}
+.skills > div >img{
+  
+    width: 200px;
+    height: 150px;
+    
+}
