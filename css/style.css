@@ -103,7 +103,7 @@
     transform: perspective(600px) rotatey(0deg);
 }
 .back{
-    
+    user-select: none;
     font-size: 24px;
     text-align: center;
     justify-content: center;
