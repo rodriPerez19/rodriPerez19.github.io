@@ -5,6 +5,7 @@ const navCont= document.querySelector('.nav__container');
 
 
 
+
 window.addEventListener('resize',()=>{    
     if(window.innerWidth > 792){
         nav.classList.remove('nav__open')
@@ -31,3 +32,4 @@ window.addEventListener("click",function(e){
         },800)
     }
 });
+
