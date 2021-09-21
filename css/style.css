@@ -103,8 +103,6 @@
     transform: perspective(600px) rotatey(0deg);
 }
 .back{
-    user-select: none;
-    font-size: 24px;
     text-align: center;
     justify-content: center;
     transform: perspective(600px) rotatey(180deg);
@@ -113,6 +111,8 @@
     color: var(--color-letra);
     text-align: center;
     width: 100%;
+    user-select: none;
+    font-size: 24px;
 }
 
 .perfil{
@@ -269,10 +269,14 @@
 
 
 @media (max-width: 792px){
-    .perfil-container{
+
+    /* .perfil-container{
         padding:0;
-        font-size: 20px;
+        font-size: 16px;
         max-width: auto;
+    } */
+    .perfil{
+        width: 70%;
     }
     .nav__close{
         clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
@@ -284,8 +288,14 @@
         width: 75vh;
         height: 60vh;
     }
-    .back{
-        width: 50%;
+   
+    
+    .back__container{
+        color: var(--color-letra);
+        text-align: center;
+        width: 70%;
+        user-select: none;
+        font-size: 20px;
     }
     .nav__container{
         opacity: 0;
@@ -332,8 +342,5 @@
         width: 30px;
         padding: 10px;
     }
-    .perfil-container{
-        font-size: 20px;
-        width: auto;
-    }
+    
 }
