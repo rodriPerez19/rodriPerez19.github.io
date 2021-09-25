@@ -9,8 +9,8 @@ const navCont= document.querySelector('.nav__container');
 window.addEventListener('resize',()=>{    
     if(window.innerWidth > 792){
         nav.classList.remove('nav__open');
-        navCont.style.opacity="1";
-        navCont.style.visibility="visible";
+        // navCont.style.opacity="1";
+        // navCont.style.visibility="visible";
     }
 });
 
